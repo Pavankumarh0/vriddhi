@@ -57,22 +57,22 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a onClick={() => scrollToSection('about')}>About</a>
+            <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a>
           </li>
           <li>
-            <a onClick={() => scrollToSection('founder')}>Founder</a>
+            <a href="#founder" onClick={(e) => { e.preventDefault(); scrollToSection('founder'); }}>Founder</a>
           </li>
           <li>
-            <a onClick={() => scrollToSection('services')}>Services</a>
+            <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a>
           </li>
           <li>
-            <a onClick={() => scrollToSection('training')}>Training</a>
+            <a href="#training" onClick={(e) => { e.preventDefault(); scrollToSection('training'); }}>Training</a>
           </li>
           <li>
-            <a onClick={() => scrollToSection('gallery')}>Gallery</a>
+            <a href="#gallery" onClick={(e) => { e.preventDefault(); scrollToSection('gallery'); }}>Gallery</a>
           </li>
           <li>
-            <a onClick={() => scrollToSection('contact')}>Contact</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a>
           </li>
           <li>
             <Link 

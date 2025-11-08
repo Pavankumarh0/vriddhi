@@ -38,16 +38,16 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a onClick={() => scrollToSection('about')}>About Vriddhi</a>
+                  <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About Vriddhi</a>
                 </li>
                 <li>
-                  <a onClick={() => scrollToSection('founder')}>About Founder</a>
+                  <a href="#founder" onClick={(e) => { e.preventDefault(); scrollToSection('founder'); }}>About Founder</a>
                 </li>
                 <li>
-                  <a onClick={() => scrollToSection('services')}>Services</a>
+                  <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a>
                 </li>
                 <li>
-                  <a onClick={() => scrollToSection('training')}>Training</a>
+                  <a href="#training" onClick={(e) => { e.preventDefault(); scrollToSection('training'); }}>Training</a>
                 </li>
                 <li>
                   <a href="https://bookyourslotatvriddhi.setmore.com/" target="_blank" rel="noopener noreferrer">Book Your Slot</a>
