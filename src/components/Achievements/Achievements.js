@@ -5,22 +5,30 @@ import './Achievements.css';
 const Achievements = () => {
   const [titleRef, titleVisible] = useScrollAnimation();
   const [countersRef, countersVisible] = useScrollAnimation();
-  const hasAnimatedRef = useRef(false);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  // Trigger animation when counters become visible
+  useEffect(() => {
+    if (countersVisible && !shouldAnimate) {
+      setShouldAnimate(true);
+    }
+  }, [countersVisible, shouldAnimate]);
 
   // Counter animation hook
   const useCounter = (end, duration = 2000) => {
     const [count, setCount] = useState(0);
     const countRef = useRef(0);
+    const hasStartedRef = useRef(false);
 
     useEffect(() => {
-      if (countersVisible && !hasAnimatedRef.current) {
+      if (shouldAnimate && !hasStartedRef.current) {
+        hasStartedRef.current = true;
         const increment = end / (duration / 16); // 60fps
         const timer = setInterval(() => {
           countRef.current += increment;
           if (countRef.current >= end) {
             setCount(end);
             clearInterval(timer);
-            hasAnimatedRef.current = true;
           } else {
             setCount(Math.floor(countRef.current));
           }
@@ -28,7 +36,7 @@ const Achievements = () => {
 
         return () => clearInterval(timer);
       }
-    }, [countersVisible, end, duration]);
+    }, [shouldAnimate, end, duration]);
 
     return count;
   };
