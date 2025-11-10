@@ -5,46 +5,47 @@ import './Achievements.css';
 const Achievements = () => {
   const [titleRef, titleVisible] = useScrollAnimation();
   const [countersRef, countersVisible] = useScrollAnimation();
-  const [shouldAnimate, setShouldAnimate] = useState(false);
+  
+  const [livesTouched, setLivesTouched] = useState(0);
+  const [counselingHours, setCounselingHours] = useState(0);
+  const [workshops, setWorkshops] = useState(0);
+  const [trainedProfessionals, setTrainedProfessionals] = useState(0);
+  
+  const hasAnimatedRef = useRef(false);
 
-  // Trigger animation when counters become visible
+  // Animate all counters when they become visible
   useEffect(() => {
-    if (countersVisible && !shouldAnimate) {
-      setShouldAnimate(true);
-    }
-  }, [countersVisible, shouldAnimate]);
+    if (!countersVisible || hasAnimatedRef.current) return;
+    
+    hasAnimatedRef.current = true;
 
-  // Counter animation hook
-  const useCounter = (end, duration = 2000) => {
-    const [count, setCount] = useState(0);
-    const countRef = useRef(0);
-    const hasStartedRef = useRef(false);
+    const animateCounter = (setter, end, duration) => {
+      let current = 0;
+      const increment = end / (duration / 16); // 60fps
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+          setter(end);
+          clearInterval(timer);
+        } else {
+          setter(Math.floor(current));
+        }
+      }, 16);
+      return timer;
+    };
 
-    useEffect(() => {
-      if (shouldAnimate && !hasStartedRef.current) {
-        hasStartedRef.current = true;
-        const increment = end / (duration / 16); // 60fps
-        const timer = setInterval(() => {
-          countRef.current += increment;
-          if (countRef.current >= end) {
-            setCount(end);
-            clearInterval(timer);
-          } else {
-            setCount(Math.floor(countRef.current));
-          }
-        }, 16);
+    const timer1 = animateCounter(setLivesTouched, 5000, 2500);
+    const timer2 = animateCounter(setCounselingHours, 5000, 2500);
+    const timer3 = animateCounter(setWorkshops, 100, 2000);
+    const timer4 = animateCounter(setTrainedProfessionals, 200, 2000);
 
-        return () => clearInterval(timer);
-      }
-    }, [shouldAnimate, end, duration]);
-
-    return count;
-  };
-
-  const livesTouched = useCounter(5000, 2500);
-  const counselingHours = useCounter(5000, 2500);
-  const workshops = useCounter(100, 2000);
-  const trainedProfessionals = useCounter(200, 2000);
+    return () => {
+      clearInterval(timer1);
+      clearInterval(timer2);
+      clearInterval(timer3);
+      clearInterval(timer4);
+    };
+  }, [countersVisible]);
 
   return (
     <section className="achievements section">
