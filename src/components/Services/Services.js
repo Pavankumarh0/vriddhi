@@ -17,7 +17,7 @@ const Services = () => {
           ref={titleRef}
           className={`section-title fade-in ${titleVisible ? 'visible' : ''}`}
         >
-          🧠 Services
+          Services
         </h2>
 
         <p className="section-subtitle">

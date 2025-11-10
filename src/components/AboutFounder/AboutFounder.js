@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import './AboutFounder.css';
 
@@ -9,6 +9,23 @@ const AboutFounder = () => {
   const [qualRef, qualVisible] = useScrollAnimation();
   const [expertiseRef, expertiseVisible] = useScrollAnimation();
   const [trainingRef, trainingVisible] = useScrollAnimation();
+  
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const founderImages = [
+    '/images/founder.jpg',
+    '/images/859D80D3-617B-4594-AABA-CC0A7E0A6D2D.JPG'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === founderImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [founderImages.length]);
 
   return (
     <section id="founder" className="about-founder section">
@@ -17,7 +34,7 @@ const AboutFounder = () => {
           ref={titleRef}
           className={`section-title fade-in ${titleVisible ? 'visible' : ''}`}
         >
-          👩‍⚕️ About the Founder
+          About the Founder
         </h2>
 
         <div className="founder-content">
@@ -25,8 +42,25 @@ const AboutFounder = () => {
             ref={imageRef}
             className={`founder-image-container scale-in ${imageVisible ? 'visible' : ''}`}
           >
-            <div className="founder-image">
-              <img src="/images/founder.jpg" alt="Sangeetha Dilipkumar" />
+            <div className="founder-image-slider">
+              {founderImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`founder-image ${index === currentImageIndex ? 'active' : ''}`}
+                >
+                  <img src={image} alt={`Sangeetha Dilipkumar ${index + 1}`} />
+                </div>
+              ))}
+              <div className="slider-dots">
+                {founderImages.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                    onClick={() => setCurrentImageIndex(index)}
+                    aria-label={`View image ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
             <div className="founder-name-card">
               <h3>Sangeetha Dilipkumar</h3>
@@ -50,7 +84,7 @@ const AboutFounder = () => {
               ref={qualRef}
               className={`founder-section fade-in ${qualVisible ? 'visible' : ''}`}
             >
-              <h4>📚 Qualifications & Experience</h4>
+              <h4>Qualifications & Experience</h4>
               <ul>
                 <li>Master's in Counselling Psychology – Madras School of Social Work</li>
                 <li>Bachelor's in Psychology – Women's Christian College</li>
@@ -63,7 +97,7 @@ const AboutFounder = () => {
               ref={expertiseRef}
               className={`founder-section fade-in ${expertiseVisible ? 'visible' : ''}`}
             >
-              <h4>🎯 Areas of Expertise</h4>
+              <h4>Areas of Expertise</h4>
               <div className="expertise-grid">
                 <span className="expertise-tag">Couples Therapy</span>
                 <span className="expertise-tag">Trauma & Inner Child Work</span>
@@ -79,7 +113,7 @@ const AboutFounder = () => {
               ref={trainingRef}
               className={`founder-section fade-in ${trainingVisible ? 'visible' : ''}`}
             >
-              <h4>🎓 Therapeutic Training</h4>
+              <h4>Therapeutic Training</h4>
               <ul>
                 <li>Transactional Analysis</li>
                 <li>Expressive Arts Therapy</li>

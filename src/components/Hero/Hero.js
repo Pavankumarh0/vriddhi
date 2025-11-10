@@ -7,6 +7,23 @@ const Hero = () => {
 
   return (
     <section className="hero">
+      <div className="hero-background-slider">
+        <div className="hero-background-track">
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1723083120473.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1750875326591.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1753951644153.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1753951644202.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1753951644237.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1753951644328.jpg)' }}></div>
+          {/* Duplicate for seamless loop */}
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1723083120473.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1750875326591.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1753951644153.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1753951644202.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1753951644237.jpg)' }}></div>
+          <div className="hero-bg-image" style={{ backgroundImage: 'url(/images/1753951644328.jpg)' }}></div>
+        </div>
+      </div>
       <div className="hero-overlay"></div>
       <div className="hero-content container">
         <div 
@@ -20,7 +37,7 @@ const Hero = () => {
           ref={ctaRef}
           className={`hero-welcome scale-in ${ctaVisible ? 'visible' : ''}`}
         >
-          <h2>✨ Welcome</h2>
+          <h2>Welcome</h2>
           <p>
             We are glad you are here. Healing is a personal journey, and we are committed 
             to walking beside you with compassion, respect, and safety.

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+import Achievements from './components/Achievements/Achievements';
 import AboutVriddhi from './components/AboutVriddhi/AboutVriddhi';
 import AboutFounder from './components/AboutFounder/AboutFounder';
 import Services from './components/Services/Services';
@@ -31,6 +32,7 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <Achievements />
       <AboutVriddhi />
       <AboutFounder />
       <Services />
