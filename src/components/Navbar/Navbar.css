@@ -34,7 +34,13 @@
 }
 
 .navbar-logo-image {
-  height: 65px;
+  height: 75px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-text-logo {
+  height: 80px;
   width: auto;
   transition: transform 0.3s ease;
 }
@@ -43,25 +49,8 @@
   transform: rotate(5deg);
 }
 
-.navbar-logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 1;
-}
-
-.logo-tagline {
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--mustard-yellow);
-  margin-top: 3px;
+.navbar-logo:hover .navbar-text-logo {
+  transform: scale(1.05);
 }
 
 .navbar-menu {
@@ -103,6 +92,11 @@
 .navbar-btn {
   padding: 10px 25px !important;
   font-size: 0.9rem !important;
+  white-space: nowrap;
+}
+
+.navbar-menu li:has(.navbar-btn) {
+  margin-left: 10px;
 }
 
 .menu-icon {
@@ -117,16 +111,16 @@
     display: block;
   }
 
+  .navbar-logo {
+    gap: 10px;
+  }
+
   .navbar-logo-image {
-    height: 55px;
+    height: 65px;
   }
 
-  .logo-text {
-    font-size: 1.5rem;
-  }
-
-  .logo-tagline {
-    font-size: 0.65rem;
+  .navbar-text-logo {
+    height: 65px;
   }
 
   .navbar-menu {
@@ -159,15 +153,15 @@
 }
 
 @media screen and (max-width: 480px) {
+  .navbar-logo {
+    gap: 8px;
+  }
+
   .navbar-logo-image {
-    height: 45px;
+    height: 55px;
   }
 
-  .logo-text {
-    font-size: 1.3rem;
-  }
-
-  .logo-tagline {
-    font-size: 0.6rem;
+  .navbar-text-logo {
+    height: 55px;
   }
 }

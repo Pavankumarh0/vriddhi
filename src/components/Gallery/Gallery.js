@@ -122,17 +122,10 @@ const Gallery = () => {
                     e.target.src = 'https://via.placeholder.com/400x300/556B2F/D4AF37?text=Vriddhi+Psychological+Services';
                   }}
                 />
-                <div className="gallery-overlay">
-                  <p>{image.alt}</p>
-                </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="gallery-note">
-        <p>Hover to pause • Click and drag to scroll • Auto-scrolls after 3 seconds of inactivity</p>
       </div>
     </section>
   );

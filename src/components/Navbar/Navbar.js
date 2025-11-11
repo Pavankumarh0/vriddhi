@@ -40,10 +40,7 @@ const Navbar = () => {
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img src="/images/vriddhi-logo.png" alt="Vriddhi Logo" className="navbar-logo-image" />
-          <div className="navbar-logo-text">
-            <span className="logo-text">VRIDDHI</span>
-            <span className="logo-tagline">Psychological Services</span>
-          </div>
+          <img src="/images/text-logo.png" alt="Vriddhi Psychological Services" className="navbar-text-logo" />
         </Link>
 
         <div className="menu-icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -75,13 +72,26 @@ const Navbar = () => {
             <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a>
           </li>
           <li>
-            <Link 
-              to="/booking" 
+            <a 
+              href="https://wa.me/917845974033" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary navbar-btn"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Book Session
-            </Link>
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://bookyourslotatvriddhi.setmore.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary navbar-btn"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Book Space
+            </a>
           </li>
         </ul>
       </div>

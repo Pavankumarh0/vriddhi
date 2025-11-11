@@ -27,6 +27,8 @@ const GroupTherapy = () => {
               <FaUsers className="therapy-icon" />
             </div>
             <h3>Relational Group Work</h3>
+            <p className="therapy-subtitle">Therapeutic group work</p>
+            <div className="therapy-duration">90 minutes</div>
             <p>
               Relational group work offers a supportive space where individuals explore their interpersonal 
               patterns, deepen self-awareness, and build healthier connections with others. Through guided 
@@ -41,12 +43,12 @@ const GroupTherapy = () => {
               </p>
             </div>
             <a 
-              href="https://bookyourslotatvriddhi.setmore.com/" 
+              href="https://wa.me/917845974033" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-primary therapy-btn"
             >
-              Book Your Slot
+              Book Session
             </a>
           </div>
 
@@ -58,6 +60,8 @@ const GroupTherapy = () => {
               <FaHeart className="therapy-icon" />
             </div>
             <h3>Couples Therapy</h3>
+            <p className="therapy-subtitle">Relationship counseling</p>
+            <div className="therapy-duration">90 minutes</div>
             <p>
               Couples therapy provides a safe and confidential environment for partners to address relationship 
               challenges, improve communication, and strengthen emotional bonds. Using evidence-based approaches, 
@@ -70,12 +74,12 @@ const GroupTherapy = () => {
               </p>
             </div>
             <a 
-              href="https://bookyourslotatvriddhi.setmore.com/" 
+              href="https://wa.me/917845974033" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-primary therapy-btn"
             >
-              Book Your Slot
+              Book Session
             </a>
           </div>
         </div>

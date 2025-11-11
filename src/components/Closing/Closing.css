@@ -85,6 +85,13 @@
   font-weight: 600;
 }
 
+.closing-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .closing-btn {
   font-size: 1.2rem !important;
   padding: 20px 60px !important;

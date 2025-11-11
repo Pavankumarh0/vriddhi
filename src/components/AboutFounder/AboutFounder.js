@@ -30,12 +30,16 @@ const AboutFounder = () => {
   return (
     <section id="founder" className="about-founder section">
       <div className="container">
-        <h2 
+        <div 
           ref={titleRef}
-          className={`section-title fade-in ${titleVisible ? 'visible' : ''}`}
+          className={`founder-title-wrapper fade-in ${titleVisible ? 'visible' : ''}`}
         >
-          About the Founder
-        </h2>
+          <h2 className="section-title founder-title-text">About Founder</h2>
+          <div className="founder-title-section">
+            <img src="/images/vriddhi-logo.png" alt="Vriddhi Logo" className="founder-title-logo" />
+            <img src="/images/text-logo.png" alt="Vriddhi Psychological Services" className="founder-title-text-logo" />
+          </div>
+        </div>
 
         <div className="founder-content">
           <div 
@@ -51,16 +55,6 @@ const AboutFounder = () => {
                   <img src={image} alt={`Sangeetha Dilipkumar ${index + 1}`} />
                 </div>
               ))}
-              <div className="slider-dots">
-                {founderImages.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`dot ${index === currentImageIndex ? 'active' : ''}`}
-                    onClick={() => setCurrentImageIndex(index)}
-                    aria-label={`View image ${index + 1}`}
-                  />
-                ))}
-              </div>
             </div>
             <div className="founder-name-card">
               <h3>Sangeetha Dilipkumar</h3>
@@ -115,17 +109,18 @@ const AboutFounder = () => {
             >
               <h4>Therapeutic Training</h4>
               <ul>
-                <li>Transactional Analysis</li>
-                <li>Expressive Arts Therapy</li>
-                <li>Somatic Experiencing</li>
-                <li>Neuro-Linguistic Programming (NLP)</li>
-                <li>Other integrative mind-body approaches</li>
+                <li>UNESCO certified Expressive arts therapist (Member of International Dance Council - Registration number: 41454)</li>
+                <li>Certified Somatic experiencing professional training Intermediate Level 2 from Somatic experiencing International</li>
+                <li>Diploma in Transactional Analysis from SAATA (South Asian Association for Transactional Analysts)</li>
+                <li>Diploma in Theatre Arts for Holistic Development from Ramana Sunritya Aalaya (RASA) (Affiliated to Ramakrishna Mission Vivekananda University, Coimbatore)</li>
+                <li>Certified Neuro linguistic practitioner from International Institute of excellence, Canada</li>
+                <li>Certified Trainer in Design the thinking from school of Design thinking, FinTech Design centre, Chennai</li>
               </ul>
             </div>
 
             <div className="founder-quote">
               <blockquote>
-                "Her work is rooted in the belief that healing the self heals generations — past, present, and future."
+                "Her work is rooted in the belief that healing the self creates a ripple effect within the greater system of being, touching generations past, present, and future."
               </blockquote>
             </div>
           </div>

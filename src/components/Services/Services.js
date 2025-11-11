@@ -32,8 +32,9 @@ const Services = () => {
             <div className="service-icon">
               <FaBrain />
             </div>
-            <div className="service-number">1</div>
             <h3>Individual Psychotherapy</h3>
+            <p className="service-subtitle">One-on-one sessions</p>
+            <div className="service-duration">60 minutes</div>
             <p>
               A safe, compassionate space to explore your inner self. Whether you are facing anxiety, depression, 
               grief, trauma, or life's many transitions, individual therapy offers a steady, supportive partnership 
@@ -44,7 +45,7 @@ const Services = () => {
               and unconscious, helping you rediscover the resilience and strength that reside within.
             </p>
             <a 
-              href="https://bookyourslotatvriddhi.setmore.com/" 
+              href="https://wa.me/917845974033" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-secondary service-btn"
@@ -60,8 +61,9 @@ const Services = () => {
             <div className="service-icon">
               <FaHeart />
             </div>
-            <div className="service-number">2</div>
             <h3>Somatic Therapy</h3>
+            <p className="service-subtitle">Body-centered sessions</p>
+            <div className="service-duration">60 minutes</div>
             <p>
               Sometimes words are not enough. Somatic therapy brings the wisdom of your body into the healing process. 
               By gently tuning into physical sensations, breath, and movement, we can uncover and release stress and 
@@ -71,7 +73,7 @@ const Services = () => {
               This work supports deeper integration, resilience, and a return to feeling more present in your life.
             </p>
             <a 
-              href="https://bookyourslotatvriddhi.setmore.com/" 
+              href="https://wa.me/917845974033" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-secondary service-btn"
@@ -87,8 +89,9 @@ const Services = () => {
             <div className="service-icon">
               <FaPalette />
             </div>
-            <div className="service-number">3</div>
             <h3>Expressive Arts Therapy</h3>
+            <p className="service-subtitle">Creative healing sessions</p>
+            <div className="service-duration">60 minutes</div>
             <p>
               Expressive arts therapy invites creativity into your process through movement, visual art, sound, 
               or writing. This approach offers a powerful way to access emotions, gain insight, and reconnect 
@@ -98,7 +101,7 @@ const Services = () => {
               <strong>No artistic experience is needed</strong>, just a willingness to explore.
             </p>
             <a 
-              href="https://bookyourslotatvriddhi.setmore.com/" 
+              href="https://wa.me/917845974033" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-secondary service-btn"

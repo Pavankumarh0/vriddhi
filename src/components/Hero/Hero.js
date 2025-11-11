@@ -46,19 +46,25 @@ const Hero = () => {
             Whether you are seeking individual therapy, group work, or professional training, 
             we will co-create a space where you can explore, heal, and grow at your own pace.
           </p>
-          <a 
-            href="https://bookyourslotatvriddhi.setmore.com/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn btn-primary hero-btn"
-          >
-            Book Your Slot
-          </a>
+          <div className="hero-buttons">
+            <a 
+              href="https://wa.me/917845974033" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-primary hero-btn"
+            >
+              Book Session
+            </a>
+            <a 
+              href="https://bookyourslotatvriddhi.setmore.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-secondary hero-btn"
+            >
+              Book Space
+            </a>
+          </div>
         </div>
-      </div>
-      
-      <div className="hero-scroll-indicator">
-        <div className="scroll-arrow"></div>
       </div>
     </section>
   );

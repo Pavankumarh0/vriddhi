@@ -33,6 +33,8 @@ const Training = () => {
               <FaUserMd />
             </div>
             <h3>Mental Health Professionals</h3>
+            <p className="training-subtitle">Professional development</p>
+            <div className="training-duration">Custom duration</div>
             <p>
               We offer training programs designed specifically for psychotherapists, psychologists, and counselors 
               to help enhance therapeutic skills, introduce contemporary therapeutic approaches, and promote ethical practice.
@@ -49,7 +51,7 @@ const Training = () => {
               rel="noopener noreferrer"
               className="btn btn-secondary"
             >
-              Book Your Slot
+              Book Space
             </a>
           </div>
 
@@ -61,6 +63,8 @@ const Training = () => {
               <FaChalkboardTeacher />
             </div>
             <h3>Educators</h3>
+            <p className="training-subtitle">Professional development</p>
+            <div className="training-duration">Custom duration</div>
             <p>
               Our specialized workshops empower educators and school staff with practical tools to support students' 
               emotional wellbeing, manage classroom dynamics, and foster healthy, inclusive learning environments.
@@ -77,7 +81,7 @@ const Training = () => {
               rel="noopener noreferrer"
               className="btn btn-secondary"
             >
-              Book Your Slot
+              Book Space
             </a>
           </div>
 
@@ -89,6 +93,8 @@ const Training = () => {
               <FaBriefcase />
             </div>
             <h3>Corporate Wellbeing</h3>
+            <p className="training-subtitle">Professional development</p>
+            <div className="training-duration">Custom duration</div>
             <p>
               Our corporate wellbeing trainings create co-creative spaces where employees and leaders come together 
               to explore stress management, emotional intelligence, resilience, work-life balance, and team communication.
@@ -105,7 +111,7 @@ const Training = () => {
               rel="noopener noreferrer"
               className="btn btn-secondary"
             >
-              Book Your Slot
+              Book Space
             </a>
           </div>
 
@@ -117,6 +123,8 @@ const Training = () => {
               <FaTheaterMasks />
             </div>
             <h3>Mental Health & Wellness Workshops</h3>
+            <p className="training-subtitle">Professional development</p>
+            <div className="training-duration">Custom duration</div>
             <p>
               Open to parents, teachers, homemakers, and the public. We lead workshops that use creative arts — 
               such as art, music, drama, movement, and storytelling — to encourage self-expression, healing, and 
@@ -134,7 +142,7 @@ const Training = () => {
               rel="noopener noreferrer"
               className="btn btn-secondary"
             >
-              Book Your Slot
+              Book Space
             </a>
           </div>
         </div>

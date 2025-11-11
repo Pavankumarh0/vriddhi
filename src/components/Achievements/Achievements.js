@@ -6,10 +6,10 @@ const Achievements = () => {
   const [titleRef, titleVisible] = useScrollAnimation();
   const [countersRef, countersVisible] = useScrollAnimation();
   
-  const [livesTouched, setLivesTouched] = useState(0);
-  const [counselingHours, setCounselingHours] = useState(0);
-  const [workshops, setWorkshops] = useState(0);
-  const [trainedProfessionals, setTrainedProfessionals] = useState(0);
+  const [individualsEmpowered, setIndividualsEmpowered] = useState(0);
+  const [psychotherapySessions, setPsychotherapySessions] = useState(0);
+  const [workshopsOffered, setWorkshopsOffered] = useState(0);
+  const [positiveTestimonials, setPositiveTestimonials] = useState(0);
   
   const hasAnimatedRef = useRef(false);
 
@@ -34,10 +34,10 @@ const Achievements = () => {
       return timer;
     };
 
-    const timer1 = animateCounter(setLivesTouched, 5000, 2500);
-    const timer2 = animateCounter(setCounselingHours, 5000, 2500);
-    const timer3 = animateCounter(setWorkshops, 100, 2000);
-    const timer4 = animateCounter(setTrainedProfessionals, 200, 2000);
+    const timer1 = animateCounter(setIndividualsEmpowered, 400, 2000);
+    const timer2 = animateCounter(setPsychotherapySessions, 5000, 2500);
+    const timer3 = animateCounter(setWorkshopsOffered, 40, 2000);
+    const timer4 = animateCounter(setPositiveTestimonials, 100, 2000);
 
     return () => {
       clearInterval(timer1);
@@ -62,23 +62,23 @@ const Achievements = () => {
           className={`achievements-grid fade-in ${countersVisible ? 'visible' : ''}`}
         >
           <div className="achievement-card">
-            <div className="achievement-number">{livesTouched.toLocaleString()}+</div>
-            <div className="achievement-label">Lives Touched</div>
+            <div className="achievement-number">{individualsEmpowered.toLocaleString()}+</div>
+            <div className="achievement-label">Individuals Empowered</div>
           </div>
 
           <div className="achievement-card">
-            <div className="achievement-number">{counselingHours.toLocaleString()}+</div>
-            <div className="achievement-label">Hours of Counseling</div>
+            <div className="achievement-number">{psychotherapySessions.toLocaleString()}+</div>
+            <div className="achievement-label">Psychotherapy Sessions Conducted</div>
           </div>
 
           <div className="achievement-card">
-            <div className="achievement-number">{workshops.toLocaleString()}+</div>
-            <div className="achievement-label">Workshops Conducted</div>
+            <div className="achievement-number">{workshopsOffered.toLocaleString()}+</div>
+            <div className="achievement-label">Workshops Offered</div>
           </div>
 
           <div className="achievement-card">
-            <div className="achievement-number">{trainedProfessionals.toLocaleString()}+</div>
-            <div className="achievement-label">Professionals Trained</div>
+            <div className="achievement-number">{positiveTestimonials.toLocaleString()}+</div>
+            <div className="achievement-label">Positive Testimonials</div>
           </div>
         </div>
 

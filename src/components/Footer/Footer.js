@@ -24,7 +24,7 @@ const Footer = () => {
                 Growth • Transformation • Healing
               </p>
               <p className="footer-about">
-                Empowering individuals through compassionate therapy, training, and holistic healing approaches.
+                Training • Teaching • Therapy
               </p>
             </div>
 
@@ -77,23 +77,23 @@ const Footer = () => {
                   <FaEnvelope />
                   <span>vriddhi.psychologists@gmail.com</span>
                 </a>
-                <a href="tel:+919791199259" className="contact-item">
+                <a href="https://wa.me/917845974033" target="_blank" rel="noopener noreferrer" className="contact-item">
                   <FaPhone />
-                  <span>+91 97911 99259</span>
+                  <span>+91 78459 74033 (WhatsApp)</span>
                 </a>
                 <div className="contact-item">
                   <FaMapMarkerAlt />
-                  <span>Parsn Paradise, T. Nagar, Chennai - 600017</span>
+                  <span>Parsn Paradise Apartments, GN Chetty Road, T. Nagar, Chennai</span>
                 </div>
               </div>
               <div className="footer-social">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/vriddhi.psychologists?igsh=MTdzOG0za2EwazdtNQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <FaInstagram />
                 </a>
                 <a href="https://www.linkedin.com/in/sangeetha-dilipkumar/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <FaLinkedin />
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/people/Vriddhi-Psychologists/pfbid02BcQWcx4tReYWNhvpQ9DTCycSpi4gxaUxKSSrc1NGfTQRuqs3sgtPqvw4gz8znaKdl/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <FaFacebook />
                 </a>
               </div>

@@ -23,14 +23,24 @@ const Closing = () => {
             <p>Healing takes many forms.</p>
             <p>Together, we will find the one meant for you.</p>
           </div>
-          <a 
-            href="https://bookyourslotatvriddhi.setmore.com/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn btn-primary closing-btn"
-          >
-            Book Your Slot
-          </a>
+          <div className="closing-buttons">
+            <a 
+              href="https://wa.me/917845974033" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-primary closing-btn"
+            >
+              Book Session
+            </a>
+            <a 
+              href="https://bookyourslotatvriddhi.setmore.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-secondary closing-btn"
+            >
+              Book Space
+            </a>
+          </div>
         </div>
       </div>
     </section>

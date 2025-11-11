@@ -2,6 +2,32 @@
   background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
 }
 
+.founder-title-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.founder-title-text {
+  margin-bottom: 30px;
+}
+
+.founder-title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.founder-title-logo {
+  height: 100px;
+  width: auto;
+}
+
+.founder-title-text-logo {
+  height: 120px;
+  width: auto;
+}
+
 .founder-content {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -48,36 +74,6 @@
   display: block;
 }
 
-.slider-dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 2;
-}
-
-.slider-dots .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  border: 2px solid var(--mustard-yellow);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.slider-dots .dot:hover {
-  background: rgba(255, 255, 255, 0.8);
-  transform: scale(1.2);
-}
-
-.slider-dots .dot.active {
-  background: var(--mustard-yellow);
-  transform: scale(1.3);
-}
 
 .founder-name-card {
   background: var(--olive-green);
@@ -217,6 +213,18 @@
 }
 
 @media (max-width: 968px) {
+  .founder-title-section {
+    gap: 15px;
+  }
+
+  .founder-title-logo {
+    height: 80px;
+  }
+
+  .founder-title-text-logo {
+    height: 100px;
+  }
+
   .founder-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -241,6 +249,18 @@
 }
 
 @media (max-width: 768px) {
+  .founder-title-section {
+    gap: 12px;
+  }
+
+  .founder-title-logo {
+    height: 60px;
+  }
+
+  .founder-title-text-logo {
+    height: 75px;
+  }
+
   .founder-intro,
   .founder-section {
     padding: 25px;
