@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vriddhi.vercel.app/sitemap.xml
+
+# Disallow admin or private pages (if any in future)
+# Disallow: /admin/
+
