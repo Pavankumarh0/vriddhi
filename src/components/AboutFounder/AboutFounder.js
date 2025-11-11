@@ -13,8 +13,9 @@ const AboutFounder = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const founderImages = [
-    '/images/founder.jpg',
-    '/images/859D80D3-617B-4594-AABA-CC0A7E0A6D2D.JPG'
+    { type: 'image', src: '/images/founder.jpg' },
+    { type: 'image', src: '/images/859D80D3-617B-4594-AABA-CC0A7E0A6D2D.JPG' },
+    { type: 'logos', src: null }
   ];
 
   useEffect(() => {
@@ -52,7 +53,14 @@ const AboutFounder = () => {
                   key={index}
                   className={`founder-image ${index === currentImageIndex ? 'active' : ''}`}
                 >
-                  <img src={image} alt={`Sangeetha Dilipkumar ${index + 1}`} />
+                  {image.type === 'image' ? (
+                    <img src={image.src} alt={`Sangeetha Dilipkumar ${index + 1}`} />
+                  ) : (
+                    <div className="founder-logos-slide">
+                      <img src="/images/vriddhi-logo.png" alt="Vriddhi Logo" className="founder-slide-tree-logo" />
+                      <img src="/images/text-logo.png" alt="Vriddhi Psychological Services" className="founder-slide-text-logo" />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
